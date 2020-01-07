@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class MainPanel extends JPanel{
 
-	public static final int NUM_BOXES = 20;
+	public static final int NUM_BOXES = 50;
 	public static final int W = 1000, H = 500;
 	private Color randColor;
 	private Color boxColor;
