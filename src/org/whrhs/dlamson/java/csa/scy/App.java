@@ -9,6 +9,7 @@ public class App extends JFrame{
 		add(new MainPanel());
 		setTitle("Drawing Boxes");
 		setSize(MainPanel.W, MainPanel.H);
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	

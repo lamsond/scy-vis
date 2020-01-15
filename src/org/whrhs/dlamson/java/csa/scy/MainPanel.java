@@ -8,8 +8,8 @@ import javax.swing.JPanel;
 public class MainPanel extends JPanel implements Runnable{
 
 	public static final int NUM_BOXES = 50;
-	public static final int W = 1300, H = 500;
-	public static final int FPS = 30;
+	public static final int W = 1001, H = 700;
+	public static final int FPS = 20;
 	private Color randColor;
 	private Color boxColor;
 	private Box[] boxes;
@@ -29,7 +29,7 @@ public class MainPanel extends JPanel implements Runnable{
 	}
 	
 	public void move() {
-		xOff+=5;
+		xOff+=1;
 	}
 	
 	@Override
@@ -49,16 +49,18 @@ public class MainPanel extends JPanel implements Runnable{
 	
 	@Override
 	public void run() {
+		long startTime, endTime, dt, sleepTime;
 		
 		while(true) {
-			long startTime = System.currentTimeMillis();
+			startTime = System.currentTimeMillis();
 			
 			move();
 			repaint();
 			
-			long endTime = System.currentTimeMillis();
-			long dt = endTime - startTime;
-			long sleepTime = Math.max(FPS - dt, 2);
+			endTime = System.currentTimeMillis();
+			dt = endTime - startTime;
+			System.out.println(dt);
+			sleepTime = Math.max(FPS - dt, 2);
 			
 			try {
 				Thread.sleep(sleepTime);

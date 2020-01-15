@@ -5,7 +5,7 @@ import java.awt.Graphics;
 
 public class Box {
 	
-	public static final int W = MainPanel.W / MainPanel.NUM_BOXES;
+	public static final int W = 20/*MainPanel.W / MainPanel.NUM_BOXES*/;
 	private int height;
 	private Color color;
 	
