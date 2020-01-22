@@ -49,9 +49,9 @@ public class MainPanel extends JPanel implements ActionListener{
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.drawOval(xOff, H/2, 10, 10);
-		/*for(int i = 0; i < boxes.length; i++){
+		for(int i = 0; i < boxes.length; i++){
 			boxes[i].drawBox(g, i*W/NUM_BOXES + xOff);
-		}*/
+		}
 	}
 	
 }
